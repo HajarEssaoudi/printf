@@ -9,6 +9,9 @@ all:		$(NAME)
 $(NAME):	$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+%.o: %.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
 	rm -f $(OBJS)
 

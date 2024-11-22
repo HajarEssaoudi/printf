@@ -6,11 +6,11 @@
 /*   By: hes-saou <hes-saou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 14:58:32 by hes-saou          #+#    #+#             */
-/*   Updated: 2024/11/20 14:59:15 by hes-saou         ###   ########.fr       */
+/*   Updated: 2024/11/22 15:50:58 by hes-saou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef FT_PRINTF_H
+#ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
 # include <stdarg.h>

@@ -6,7 +6,7 @@
 /*   By: hes-saou <hes-saou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 23:56:32 by hes-saou          #+#    #+#             */
-/*   Updated: 2024/11/20 14:57:41 by hes-saou         ###   ########.fr       */
+/*   Updated: 2024/11/22 15:37:15 by hes-saou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_printf(const char *str, ...)
 	i = 0;
 	count = 0;
 	va_start(args, str);
+	if (str == NULL)
+		return (-1);
 	while (str[i])
 	{
 		if (str[i] == '%' && str[i + 1] != '%')
@@ -28,11 +30,8 @@ int	ft_printf(const char *str, ...)
 			count += check_type(str[i + 1], args);
 			i += 2;
 		}
-		else if (str[i] == '%' && str[i + 1] == '%')
-		{
-			count += ft_put_char('%');
-			i += 2;
-		}
+		else if (str[i] == '%' && str[i + 1] == '\0')
+			return (-1);
 		else
 			count += ft_put_char(str[i++]);
 	}

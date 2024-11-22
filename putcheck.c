@@ -6,7 +6,7 @@
 /*   By: hes-saou <hes-saou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 23:47:08 by hes-saou          #+#    #+#             */
-/*   Updated: 2024/11/20 14:57:55 by hes-saou         ###   ########.fr       */
+/*   Updated: 2024/11/22 15:37:56 by hes-saou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	check_type(char c, va_list args)
 		count += ft_put_u(va_arg(args, int));
 	else if (c == 'x' || c == 'X')
 		count += ft_print_hex(c, va_arg(args, unsigned int));
+	else if (c == '%' && c == '%')
+		count += ft_put_char('%');
 	else
 		count += ft_put_char(c);
 	va_end(args);

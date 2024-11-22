@@ -6,7 +6,7 @@
 /*   By: hes-saou <hes-saou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 14:21:54 by hes-saou          #+#    #+#             */
-/*   Updated: 2024/11/20 14:57:26 by hes-saou         ###   ########.fr       */
+/*   Updated: 2024/11/22 15:44:39 by hes-saou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ int	ft_print_hex(char c, unsigned int num)
 
 int	ft_print_ptr(unsigned long num)
 {
-	const char	*base_s = "0123456789abcdef";
+	const char	*base = "0123456789abcdef";
 	int			count;
 
 	count = 0;
 	if (num >= 16)
 		count += ft_print_ptr(num / 16);
-	count += ft_put_char(base_s[num % 16]);
+	count += ft_put_char(base[num % 16]);
 	return (count);
 }
 
